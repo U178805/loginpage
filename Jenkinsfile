@@ -46,7 +46,7 @@ pipeline {
              
             steps 
 			{
-                sh "docker run -d -p 8003:8080 vipinchechi/loginpage_project:latest"
+                sh "docker run -d -p 8004:9090 vipinchechi/loginpage_project:latest"
  
             }
         }
