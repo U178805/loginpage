@@ -50,13 +50,6 @@ pipeline {
  
             }
         }
- stage('Run Docker container on remote hosts') {
-             
-            steps {
-                sh "docker -H ssh jenkins@192.168.56.103 run  -p 8005:9090 vipinchechi/loginpage_project"
- 
-            }
-        }
     }
 	}
     
