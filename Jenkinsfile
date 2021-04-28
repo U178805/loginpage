@@ -46,14 +46,14 @@ pipeline {
              
             steps 
 			{
-                sh "docker run -d -p 8004:9090 vipinchechi/loginpage_project:latest"
+                sh "docker run -d -p 8005:9090 vipinchechi/loginpage_project:latest"
  
             }
         }
  stage('Run Docker container on remote hosts') {
              
             steps {
-                sh "docker -H ssh jenkins@192.168.56.103 run  -p 8004:9090 vipinchechi/loginpage_project"
+                sh "docker -H ssh jenkins@192.168.56.103 run  -p 8005:9090 vipinchechi/loginpage_project"
  
             }
         }
